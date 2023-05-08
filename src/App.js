@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import DomToImage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 
@@ -26,7 +26,7 @@ function App() {
     DomToImage.toBlob(
       document.getElementById("container")).then
     (function (blob) {
-      window.saveAs(blob, "myMeme.png");
+      window.saveAs (blob, "myMeme.png");
     })
   };
   
